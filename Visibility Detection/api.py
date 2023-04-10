@@ -26,7 +26,7 @@ def writeJSON():
 app = Flask(__name__)
 
 
-@app.route('/api', methods=['GET'])
+@app.route('/vis', methods=['GET'])
 def request():
     return json.dumps(writeJSON())
 
