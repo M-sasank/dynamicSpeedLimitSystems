@@ -8,7 +8,7 @@ images_cant_detect_vl = {};
 
 for dir_0_idx = 1 : length(directory_1s)
     fprintf('Processing %s\n', directory_1s{dir_0_idx})
-    road_surface = imread(strcat('./road_surfaces/thr_', num2str(dir_0_idx), '.jpg'));
+    road_surface = imread(strcat('./Road_surfaces/thr_', num2str(dir_0_idx), '.jpg'));
     valid_region = im2bw(road_surface);
     [y, x] = find(valid_region == 1);
     line_white_counter = zeros(size(valid_region, 1), 1);
