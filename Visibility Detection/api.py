@@ -1,8 +1,10 @@
-from flask import Flask
+from flask import Flask, jsonify
 import os
 import json
 import time
+from resize import resize
 
+resize()
 
 def writeJSON():
     dict = {}
@@ -18,7 +20,7 @@ def writeJSON():
             s = {"vis": data}
             x = time.time()
             y = time.ctime(x)
-            s["time"] = y
+            s["timestamp"] = y
             dict["test" + str(i)] = s
     return dict
 
@@ -26,10 +28,13 @@ def writeJSON():
 app = Flask(__name__)
 
 
-@app.route('/vis', methods=['GET'])
+@app.route('/visibility', methods=['GET'])
 def request():
     return json.dumps(writeJSON())
 
+@app.route('/density', methods=['GET'])
+def density():
+    return jsonify({"density": None})
 
 if __name__ == '__main__':
     app.run(debug=True)
