@@ -1,2 +1,10 @@
-# Intelligent Speed Management System
-Project we did for the course of prototyping and testing in semester 6
+Intelligent Speed Management System
+
+Please Refer the report for further details
+
+Contributors
+MADATI SAI DURGA SASANK
+SRAVANTH CHOWDARY POTLURI
+GAURAV
+BODDAPATI VENKATA SAKETHA RAMA
+AVINASH R CHANGRANI
